@@ -1,4 +1,4 @@
-import ProjectModel from '../models/project.js';
+import ProjectModel from '../models/Project.js';
 
 // Create CRUD operations for Project
 

@@ -1,8 +1,7 @@
-
-// server/models/Project.js
+// server/models/Qualification.js
 import mongoose from 'mongoose';
 
-const projectSchema = new mongoose.Schema({
+const qualificationSchema = new mongoose.Schema({
   title:       { type: String, required: true },
   firstname:   { type: String, required: true },
   lastname:    { type: String, required: true },
@@ -11,4 +10,5 @@ const projectSchema = new mongoose.Schema({
   description: { type: String, required: true }
 }, { timestamps: true });
 
-export default mongoose.model('Project', projectSchema);
+export default mongoose.model('Qualification', qualificationSchema);
+
