@@ -1,37 +1,18 @@
 {
-  "name": "week3-402",
+  "name": "myportfolio-root",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Root orchestrator to run client (Vite) and server (Express) together",
   "workspaces": [
     "client",
     "server"
   ],
   "scripts": {
     "start": "npm-run-all --parallel start:client start:server",
-    "start:server": "npm --prefix server run dev",
-    "start:client": "npm --prefix client run dev"
+    "start:client": "npm --prefix client run dev",
+    "start:server": "npm --prefix server run dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kasachinberihun/comp229-f25-402-week3.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Kasachinberihun/comp229-f25-402-week3/issues"
-  },
-  "homepage": "https://github.com/Kasachinberihun/comp229-f25-402-week3#readme",
-  "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.19.2",
-    "morgan": "^1.10.1",
+  "devDependencies": {
     "npm-run-all": "^4.1.5"
   }
 }

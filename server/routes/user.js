@@ -1,20 +1,23 @@
 
 import { Router } from 'express';
-import * as ctrl from '../controllers/userController.js';
+import {
+  getAll, getById, createOne, updateById, deleteById, deleteAll,
+  register, login, logout
+} from '../controllers/userController.js';
 
 const router = Router();
 
-// ----- CRUD -----
-router.get('/', ctrl.getAll);
-router.get('/:id', ctrl.getById);
-router.post('/', ctrl.createOne);
-router.put('/:id', ctrl.updateById);
-router.delete('/:id', ctrl.deleteById);
-router.delete('/', ctrl.deleteAll);
+// CRUD
+router.get('/', getAll);
+router.get('/:id', getById);
+router.post('/', createOne);
+router.put('/:id', updateById);
+router.delete('/:id', deleteById);
+router.delete('/', deleteAll);
 
-// ----- AUTH -----
-router.post('/register', ctrl.register);
-router.post('/login', ctrl.login);
-router.post('/logout', ctrl.logout);
+// Auth
+router.post('/auth/register', register);
+router.post('/auth/login',    login);
+router.post('/auth/logout',   logout);
 
 export default router;

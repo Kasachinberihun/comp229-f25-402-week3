@@ -8,7 +8,10 @@ const qualificationSchema = new mongoose.Schema({
   email:       { type: String, required: true },
   completion:  { type: Date,   required: true },
   description: { type: String, required: true }
-}, { timestamps: true });
+}, { 
+  timestamps: true,
+  collection: 'qualifications' // ✅ explicitly name the collection
+});
 
 export default mongoose.model('Qualification', qualificationSchema);
 
